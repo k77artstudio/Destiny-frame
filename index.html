@@ -1,102 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K77 — Typography Beyond Readability</title>
 
-<title>Special Message</title>
+  <!-- META PIXEL -->
+  <!-- Paste your Meta Pixel code here -->
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #000000, #0a0a0a, #111111);
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .container {
-    padding: 40px 20px;
-  }
+    body {
+      background: #050505;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-  .logo {
-    width: 200px;
-    margin-bottom: 25px;
-  }
+    section {
+      padding: 100px 8%;
+    }
 
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+        url('YOUR-HERO-IMAGE.jpg') center/cover;
+    }
 
-  audio {
-    margin-top: 20px;
-    width: 90%;
-  }
+    .logo {
+      font-size: 6rem;
+      font-weight: 900;
+      letter-spacing: 8px;
+      margin-bottom: 20px;
+    }
 
-  video {
-    margin-top: 30px;
-    width: 90%;
-    border-radius: 10px;
-  }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      opacity: 0.8;
+      line-height: 1.7;
+    }
 
-  .gratitude {
-    margin-top: 40px;
-    font-size: 16px;
-    opacity: 0.8;
-    line-height: 1.6;
-  }
+    .hero-tags {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-</style>
+    .tag {
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 16px 34px;
+      background: white;
+      color: black;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+
+    .section-text {
+      opacity: 0.75;
+      max-width: 800px;
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 60px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
+      transition: 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .chain-grid {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .chain-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 35px;
+      border-radius: 28px;
+      backdrop-filter: blur(10px);
+    }
+
+    .chain-card h3 {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .chain-card p {
+      opacity: 0.7;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 140px 8%;
+    }
+
+    .cta h2 {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      padding: 40px 8%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      .logo {
+        font-size: 4rem;
+      }
+
+      .cta h2 {
+        font-size: 2.5rem;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="logo">K77</h1>
 
-  <!-- LOGO -->
-  <img src="https://files.catbox.moe/sqylip.png
-" class="logo">
+    <p>
+      Typography transformed into collectible narrative experiences.
+    </p>
 
-  <!-- TITLE -->
-  <h1>Every piece carries a story-created for a few.,<br>One of five, owned by OBENBE-2026🌹</h1>
+    <div class="hero-tags">
+      <div class="tag">VOICE NARRATIVES</div>
+      <div class="tag">AR EXPERIENCE</div>
+      <div class="tag">COLLECTOR OWNERSHIP</div>
+    </div>
 
- <p style="
-  text-align: center;
-  font-family: 'Georgia', serif;
-  font-size: 18px;
-  color: #d4af37;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-">
-  This piece speaks. Listen.
-</p>
- <!-- AUDIO -->
-  <audio controls>
-    <source src="https://files.catbox.moe/wwc3eu.mp3
-" type="audio/mpeg">
-  </audio>
+    <a href="#chain" class="btn">ENTER THE CHAIN</a>
+  </section>
 
-  <!-- VIDEO (AUTO PLAY - NO SOUND) -->
-  <video autoplay muted loop playsinline>
-    <source src="https://files.catbox.moe/2vzzpz.mp4
-" type="video/mp4">
-  </video>
 
-  <!-- GRATITUDE -->
-  <p class="gratitude">
-    Thank you for being part of this story.<br>
-    I’m because you are.<br><br>
-    -,<br>
-    Kindred Spirit.
-  </p>
+  <!-- ABOUT -->
+  <section>
+    <h2 class="section-title">More Than Typography</h2>
 
-</div>
+    <p class="section-text">
+      K77 is a typography art studio creating immersive collectible experiences through words, emotion and identity.
+      
+      Every piece carries narrative, ownership, atmosphere and memory beyond the physical frame.
+    </p>
+  </section>
+
+
+  <!-- GALLERY -->
+  <section>
+    <h2 class="section-title">Selected Works</h2>
+
+    <div class="gallery">
+      <img src="YOUR-IMAGE-1.jpg" alt="K77 Artwork">
+      <img src="YOUR-IMAGE-2.jpg" alt="K77 Artwork">
+      <img src="YOUR-IMAGE-3.jpg" alt="K77 Artwork">
+      <img src="YOUR-IMAGE-4.jpg" alt="K77 Artwork">
+    </div>
+  </section>
+
+
+  <!-- K77 CHAIN -->
+  <section id="chain">
+    <h2 class="section-title">The K77 Chain</h2>
+
+    <p class="section-text">
+      Every piece is connected to an immersive identity system combining storytelling, augmented reality and collector ownership.
+    </p>
+
+    <div class="chain-grid">
+
+      <div class="chain-card">
+        <h3>QR Activation</h3>
+        <p>
+          Every piece unlocks a private narrative through a scannable QR experience.
+        </p>
+      </div>
+
+      <div class="chain-card">
+        <h3>Voice Narratives</h3>
+        <p>
+          Listen to poetry, emotion, inspiration and the meaning behind every work.
+        </p>
+      </div>
+
+      <div class="chain-card">
+        <h3>AR Experience</h3>
+        <p>
+          Selected artworks activate through cinematic augmented reality visuals.
+        </p>
+      </div>
+
+      <div class="chain-card">
+        <h3>Collector Identity</h3>
+        <p>
+          Each piece carries a unique artwork ID and ownership record.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- COMMISSIONS -->
+  <section>
+    <h2 class="section-title">Custom Commissions</h2>
+
+    <p class="section-text">
+      Personal stories transformed into collectible typography art.
+
+      Designed for collectors, emotional tributes, luxury gifts and narrative storytelling.
+    </p>
+
+    <a href="https://instagram.com/YOURUSERNAME" class="btn">
+      COMMISSION A PIECE
+    </a>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="cta">
+    <h2>
+      More Than Words.<br>
+      More Than Decoration.
+    </h2>
+
+    <p class="section-text" style="margin:auto; margin-top:20px;">
+      Enter the world of K77.
+    </p>
+
+    <a href="https://instagram.com/YOURUSERNAME" class="btn">
+      ENTER
+    </a>
+  </section>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © K77 ART STUDIO — TYPOGRAPHY • STORY • OWNERSHIP
+  </div>
 
 </body>
 </html>
-<!-- update -->
