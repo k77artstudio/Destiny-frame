@@ -1,311 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K77 — Typography Beyond Readability</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>K77 Art Studio — Identity Art</title>
 
-  <!-- META PIXEL -->
-  <!-- Paste your Meta Pixel code here -->
+<!-- META PIXEL (PASTE ONCE HERE) -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track','PageView');
+</script>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    body {
-      background: #050505;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-    }
+<style>
 
-    section {
-      padding: 100px 8%;
-    }
+body{
+margin:0;
+font-family:Inter;
+background:#0B0B0B;
+color:#F5F5F5;
+}
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-        url('YOUR-HERO-IMAGE.jpg') center/cover;
-    }
+section{padding:85px 8%;}
 
-    .logo {
-      font-size: 6rem;
-      font-weight: 900;
-      letter-spacing: 8px;
-      margin-bottom: 20px;
-    }
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.9)),
+url('YOUR-HERO.jpg') center/cover;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      opacity: 0.8;
-      line-height: 1.7;
-    }
+.logo{
+font-size:6rem;
+font-weight:900;
+color:#C8A24A;
+letter-spacing:6px;
+}
 
-    .hero-tags {
-      margin-top: 30px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.hook{
+max-width:780px;
+font-size:1.2rem;
+line-height:1.8;
+opacity:.9;
+}
 
-    .tag {
-      border: 1px solid rgba(255,255,255,0.15);
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      background: rgba(255,255,255,0.03);
-      backdrop-filter: blur(10px);
-    }
+.highlight{
+color:#C8A24A;
+font-weight:600;
+}
 
-    .btn {
-      margin-top: 40px;
-      display: inline-block;
-      padding: 16px 34px;
-      background: white;
-      color: black;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 999px;
-      transition: 0.3s ease;
-    }
+.badge{
+margin-top:18px;
+padding:10px 18px;
+border-radius:999px;
+border:1px solid rgba(200,162,74,.4);
+color:#C8A24A;
+font-size:.9rem;
+}
 
-    .btn:hover {
-      transform: translateY(-4px);
-    }
+.btn{
+margin-top:25px;
+padding:15px 32px;
+background:#C8A24A;
+color:black;
+font-weight:700;
+border-radius:999px;
+text-decoration:none;
+display:inline-flex;
+gap:10px;
+align-items:center;
+transition:.3s;
+}
 
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 25px;
-      font-weight: 800;
-    }
+.btn:hover{
+transform:translateY(-3px);
+opacity:.9;
+}
 
-    .section-text {
-      opacity: 0.75;
-      max-width: 800px;
-      line-height: 1.9;
-      font-size: 1.05rem;
-    }
+.section-title{
+font-size:2.2rem;
+color:#C8A24A;
+margin-bottom:18px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 60px;
-    }
+.sub{
+max-width:800px;
+opacity:.8;
+line-height:1.7;
+}
 
-    .gallery img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 24px;
-      transition: 0.4s ease;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+margin-top:35px;
+}
 
-    .gallery img:hover {
-      transform: scale(1.03);
-      opacity: 0.9;
-    }
+.card{
+padding:22px;
+border-radius:14px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(200,162,74,.15);
+}
 
-    .chain-grid {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
+.mockup{
+height:280px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:14px;
+border:1px dashed rgba(200,162,74,.3);
+color:#777;
+}
 
-    .chain-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 35px;
-      border-radius: 28px;
-      backdrop-filter: blur(10px);
-    }
+.footer{
+text-align:center;
+padding:40px;
+opacity:.5;
+border-top:1px solid rgba(200,162,74,.2);
+}
 
-    .chain-card h3 {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-    }
-
-    .chain-card p {
-      opacity: 0.7;
-      line-height: 1.7;
-      font-size: 0.95rem;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 140px 8%;
-    }
-
-    .cta h2 {
-      font-size: 4rem;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .footer {
-      padding: 40px 8%;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      text-align: center;
-      opacity: 0.5;
-      font-size: 0.9rem;
-    }
-
-    @media(max-width: 768px) {
-      .logo {
-        font-size: 4rem;
-      }
-
-      .cta h2 {
-        font-size: 2.5rem;
-      }
-
-      section {
-        padding: 80px 7%;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1 class="logo">K77</h1>
+<!-- HERO / HOOK -->
+<section class="hero">
 
-    <p>
-      Typography transformed into collectible narrative experiences.
-    </p>
+<h1 class="logo">K77</h1>
 
-    <div class="hero-tags">
-      <div class="tag">VOICE NARRATIVES</div>
-      <div class="tag">AR EXPERIENCE</div>
-      <div class="tag">COLLECTOR OWNERSHIP</div>
-    </div>
+<p class="hook">
+Most people don’t own art. They own decoration.
+<br><br>
+At <span class="highlight">K77 Art Studio</span>, we create <b>identity-based collectible art</b> — where your story becomes a physical artwork connected to the <b>K77 Chain</b>.
+</p>
 
-    <a href="#chain" class="btn">ENTER THE CHAIN</a>
-  </section>
+<div class="badge">
+FREE Nationwide Delivery • Limited Commissions • Handmade Identity Art
+</div>
 
+<a class="btn"
+href="YOUR_WHATSAPP_LINK"
+onclick="fbq('track','Lead');">
+🛒 Commission on WhatsApp
+</a>
 
-  <!-- ABOUT -->
-  <section>
-    <h2 class="section-title">More Than Typography</h2>
+</section>
 
-    <p class="section-text">
-      K77 is a typography art studio creating immersive collectible experiences through words, emotion and identity.
-      
-      Every piece carries narrative, ownership, atmosphere and memory beyond the physical frame.
-    </p>
-  </section>
+<!-- WHAT MAKES IT DIFFERENT -->
+<section>
 
+<h2 class="section-title">Why K77 Exists</h2>
 
-  <!-- GALLERY -->
-  <section>
-    <h2 class="section-title">Selected Works</h2>
+<p class="sub">
+We don’t design decoration.
+We transform personal stories into living visual identity pieces that carry memory, emotion, and ownership.
+</p>
 
-    <div class="gallery">
-      <img src="YOUR-IMAGE-1.jpg" alt="K77 Artwork">
-      <img src="YOUR-IMAGE-2.jpg" alt="K77 Artwork">
-      <img src="YOUR-IMAGE-3.jpg" alt="K77 Artwork">
-      <img src="YOUR-IMAGE-4.jpg" alt="K77 Artwork">
-    </div>
-  </section>
+<div class="grid">
 
+<div class="card">Your Story → Custom Artwork</div>
+<div class="card">QR Unlock → Voice / Poetry Narrative</div>
+<div class="card">AR Layer → Motion Visual Experience</div>
+<div class="card">Ownership ID → Unique Collectible Record</div>
 
-  <!-- K77 CHAIN -->
-  <section id="chain">
-    <h2 class="section-title">The K77 Chain</h2>
+</div>
 
-    <p class="section-text">
-      Every piece is connected to an immersive identity system combining storytelling, augmented reality and collector ownership.
-    </p>
+</section>
 
-    <div class="chain-grid">
+<!-- K77 CHAIN PROOF SYSTEM -->
+<section>
 
-      <div class="chain-card">
-        <h3>QR Activation</h3>
-        <p>
-          Every piece unlocks a private narrative through a scannable QR experience.
-        </p>
-      </div>
+<h2 class="section-title">The K77 Chain</h2>
 
-      <div class="chain-card">
-        <h3>Voice Narratives</h3>
-        <p>
-          Listen to poetry, emotion, inspiration and the meaning behind every work.
-        </p>
-      </div>
+<p class="sub">
+Every artwork is connected to a private system that makes it more than a frame — it becomes a living experience.
+</p>
 
-      <div class="chain-card">
-        <h3>AR Experience</h3>
-        <p>
-          Selected artworks activate through cinematic augmented reality visuals.
-        </p>
-      </div>
+<div class="grid">
 
-      <div class="chain-card">
-        <h3>Collector Identity</h3>
-        <p>
-          Each piece carries a unique artwork ID and ownership record.
-        </p>
-      </div>
+<div class="card">QR Code Activation Experience</div>
+<div class="card">Voice Message / Poetry Narrative</div>
+<div class="card">Augmented Reality Motion Layer</div>
+<div class="card">Physical Certificate of Authenticity</div>
+<div class="card">Unique Ownership ID (Trackable)</div>
 
-    </div>
-  </section>
+</div>
 
+</section>
 
-  <!-- COMMISSIONS -->
-  <section>
-    <h2 class="section-title">Custom Commissions</h2>
+<!-- PROOF -->
+<section>
 
-    <p class="section-text">
-      Personal stories transformed into collectible typography art.
+<h2 class="section-title">Selected Works</h2>
 
-      Designed for collectors, emotional tributes, luxury gifts and narrative storytelling.
-    </p>
+<div class="grid">
 
-    <a href="https://instagram.com/YOURUSERNAME" class="btn">
-      COMMISSION A PIECE
-    </a>
-  </section>
+<div class="mockup">ADD ART MOCKUP</div>
+<div class="mockup">ADD ART MOCKUP</div>
+<div class="mockup">ADD ART MOCKUP</div>
 
+</div>
 
-  <!-- FINAL CTA -->
-  <section class="cta">
-    <h2>
-      More Than Words.<br>
-      More Than Decoration.
-    </h2>
+</section>
 
-    <p class="section-text" style="margin:auto; margin-top:20px;">
-      Enter the world of K77.
-    </p>
+<!-- OFFER -->
+<section>
 
-    <a href="https://instagram.com/YOURUSERNAME" class="btn">
-      ENTER
-    </a>
-  </section>
+<h2 class="section-title">What You Receive</h2>
 
+<div class="grid">
 
-  <!-- FOOTER -->
-  <div class="footer">
-    © K77 ART STUDIO — TYPOGRAPHY • STORY • OWNERSHIP
-  </div>
+<div class="card">Custom Identity Artwork</div>
+<div class="card">K77 Chain Activation</div>
+<div class="card">Physical + Digital Experience</div>
+<div class="card">Certificate + Ownership ID</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+<section>
+
+<h2 class="section-title">Commission Range</h2>
+
+<div class="grid">
+
+<div class="card">Basic — ₦____</div>
+<div class="card">Standard — ₦____</div>
+<div class="card">Premium — ₦____</div>
+
+</div>
+
+</section>
+
+<!-- FINAL CTA -->
+<section style="text-align:center;">
+
+<h2 class="section-title">Your Story Deserves to Exist as Art</h2>
+
+<p class="sub">
+Start your K77 Chain piece today — limited custom commissions available.
+</p>
+
+<a class="btn"
+href="YOUR_WHATSAPP_LINK"
+onclick="fbq('track','Lead');">
+🛒 Start on WhatsApp
+</a>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+© K77 ART STUDIO — K77 CHAIN • IDENTITY • OWNERSHIP • STORY
+</div>
 
 </body>
 </html>
